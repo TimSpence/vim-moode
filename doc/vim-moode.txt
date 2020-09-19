@@ -1,0 +1,39 @@
+*vim-moode* Control moOde audio from inside Vim.
+
+Author: Tim Spence <https://github.com/TimSpence>
+License: :shrug:
+Version: 0.1
+
+INTRODUCTION                                     *vim-moode-introduction*
+
+Adjust the volume on your raspberry pi without leaving your editor.  This plugin
+currently supports all available features of moOde audio's limited web api.
+
+COMMANDS                                         *vim-moode-commands*
+
+These commands are supported:
+    Moode         Shows status
+    MoodeMute     Toggles muting
+    MoodePlay     Presses Play
+    MoodeStop     Presses Stop
+    MoodeUp       Increases Volume
+    MoodeDown     Decreases Volume
+
+CONFIGURATION                                    *vim-moode-configuration*
+
+By default, the plugin sends commands to http://localhost/.  The http scheme,
+http host, and http port are configurable. The default settings are:
+
+    let g:moode_scheme = 'http'
+    let g:moode_host = '127.0.0.1'
+    let g:moode_port = 80
+
+You can configure the volume step, which is the number of clicks the MoodeUp
+and MoodeDown commands when no argument is present.  By default it is set to:
+    let g:moode_volume_step = 5
+
+ABOUT                                            *vim-moode-about*
+
+Soon to be hosted on [github](https://github.com/TimSpence/vim-moode.git).
+
+  vim:tw=78:et:ft=help:norl:
